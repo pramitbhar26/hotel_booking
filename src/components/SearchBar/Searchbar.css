@@ -1,0 +1,11 @@
+.headerSearch{
+    /* height: 30px; */
+    /* bottom: 100vh; */
+    width: 90%;
+    /* padding-top: 45%; */
+    padding-left: 30%;
+    background-color: white;
+    border: 3px yellow;
+    display: flex;
+    align-items: center;
+}
