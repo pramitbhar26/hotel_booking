@@ -125,7 +125,16 @@ header ul {
 header ul li{
     display: inline-block;
 }
-
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-gap: 10px;
+    list-style: none;
+    align-items: center;
+}
+.menu-icons{
+    display: none;
+}
 .nav-menu li {
     justify-content: space-between;
     margin: 0 10px;
@@ -152,4 +161,43 @@ button{
 button:hover{
     background-color: black;
     color: rgb(244, 243, 248);
+}
+
+
+@media only screen and (max-width: 850px){
+    .navbar-logo{
+        color: black;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .menu-icons {
+        display: block;
+        cursor: pointer;
+    }
+    .NavbarItems{
+        z-index: 99;
+    }   
+    .nav-menu{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      opacity: 0;
+      align-items: stretch;
+      padding: 80px 0 30px 0;
+      margin: 0;
+      text-align: center;
+      z-index: 89;
+    }
+    .nav-menu.active{
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+        border-radius: 13px;
+    }
 }
