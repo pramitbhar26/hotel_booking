@@ -7,8 +7,10 @@ import Searchbar from '../components/SearchBar/Searchbar';
 const Home = () => {
   return (
     <>
+    <div>
     <Navbar />
-    {/* <div> */}
+    </div>
+    <div>
     <Hero
     // cName="hero"
     // heroImg={Heroimg}
@@ -16,8 +18,9 @@ const Home = () => {
     // text="Choose Your Favourite Destination"
     />
     
-  {/* </div> */}
+  </div>
     <Searchbar />
+    <h1>Hello Rooms</h1>
     </>
   )
 }

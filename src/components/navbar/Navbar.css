@@ -145,7 +145,7 @@ header ul li{
     color: #222;
 }
 
-button{
+.NavBtn{
     padding: 0.5rem 1rem;
     background-color: #fff;
     white-space: nowrap;
@@ -158,7 +158,7 @@ button{
 }
 
 
-button:hover{
+.NavBtn:hover{
     background-color: black;
     color: rgb(244, 243, 248);
 }
@@ -169,35 +169,61 @@ button:hover{
         color: black;
         font-size: 2rem;
         cursor: pointer;
+        margin-left: -100px;
     }
     .menu-icons {
-        display: block;
+        display:block;
         cursor: pointer;
+        /* margin-left: 400px; */
+        margin-top: 18px;
     }
     .NavbarItems{
         z-index: 99;
+        text-decoration: white;
     }   
     .nav-menu{
-      display: flex;
+      display:flex;
+      flex: 1;
+      background: inherit;
+      /* background-color:cornsilk; */
       flex-direction: column;
-      justify-content: flex-start;
-      width: 100%;
+      justify-content: center;
+      width: 60%;
       height: auto;
       position: absolute;
-      top: 0;
-      left: -100%;
+      top: 90px;
+      /* left: -100%; */
       opacity: 0;
-      align-items: stretch;
-      padding: 80px 0 30px 0;
+      align-items:center;
+      /* padding: 80px 0 30px 0; */
       margin: 0;
       text-align: center;
       z-index: 89;
+       backdrop-filter: blur(8px);
+       gap: -2rem;
+    }
+    .nav-links{
+        /* color: rgb(231, 190, 29);
+         */
+         color: black;
+    }
+
+    .nav-menu.active li:hover{
+        transform: scale(1.5);
     }
     .nav-menu.active{
-        left: 0;
+        left: 95px;
+        height: 60vh;
         opacity: 1;
-        z-index: -1;
+        z-index: 1;
+        /* font: 5vw system-ui, sans-serif; */
+        font-weight: 900;
+        /* text-decoration: #fff; */
         transition: 0.3s ease-in-out;
         border-radius: 13px;
+    }
+    .NavBtn:hover{
+        background-color: black;
+        color: rgb(244, 243, 248);
     }
 }
