@@ -4,7 +4,7 @@ import "./Navbar.css";
 import { MenuItems } from '../MenuItems';
 import {Link} from "react-router-dom";
 const Navbar = () => {
-  const [state,setState] = useState("true");
+  const [state,setState] = useState(false);
   // handleClicked = () =>{
   //   setState(!state);  
   // }

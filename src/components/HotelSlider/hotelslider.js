@@ -21,25 +21,47 @@ const hotelslider = () => {
                     <img src={img1} alt='hotelImg' className='featuredImg'/>
                 </div> */}
                 <Swiper
-                    slidesPerView={3}
-                    spaceBetween={5}
+                    // slidesPerView={3}
+                    // spaceBetween={5}
                     pagination={{
                         clickable: true,
                     }}
                     modules={[Pagination]}
                     className="mySwiper"
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        480: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 15,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 5,
+                        },
+                        1280: {
+                            slidesPerView: 3,
+                            spaceBetween: 5,
+                        },
+                    }}
                 >
                     <SwiperSlide>
-                        <img src={img1} alt='hotelImg' className='sliderImg'/>
+                        <img src={img1} alt='hotelImg' className='sliderImg' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={img1} alt='hotelImg'/>
+                        <img src={img1} alt='hotelImg' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={img1} alt='hotelImg'/>
+                        <img src={img1} alt='hotelImg' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={img1} alt='hotelImg'/>
+                        <img src={img1} alt='hotelImg' />
                     </SwiperSlide>
                     <SwiperSlide>Slide 2</SwiperSlide>
                     <SwiperSlide>Slide 3</SwiperSlide>

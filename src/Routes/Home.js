@@ -5,6 +5,7 @@ import Hero from '../components/hero/Hero';
 // import hotel2 from "../assets/hotel2.jpg";
 import Searchbar from '../components/SearchBar/Searchbar';
 import HotelSlider from '../components/HotelSlider/hotelslider';
+import Facilities from '../components/facilities/facilities';
 const Home = () => {
   return (
     <>
@@ -19,6 +20,9 @@ const Home = () => {
       </div>
       <div>
         <HotelSlider />
+      </div>
+      <div>
+        <Facilities />
       </div>
     </>
   )

@@ -49,3 +49,26 @@
     justify-content: center;
     
   }
+  @media only screen and (max-width:850px){
+    .swiper-slide img {
+      display: inline-flex;
+      flex-direction: row;
+      width: 60vw;
+      height: 50vh;
+      left: 10px;
+      object-fit: cover;
+      border-radius: 50px;
+      /* gap: 2px; */
+    }
+
+    .heading{
+      display: flex;
+      top: 10px;
+      /* width: 100%; */
+      position: relative;
+      align-items: center;
+      justify-content:center;
+      right: 1px;
+      z-index: 1;
+    }
+  }
