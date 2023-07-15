@@ -1,7 +1,7 @@
 export const MenuItems =[
     {
         title : "Booking",
-        url : "",
+        url : "/booking",
         cName : "nav-links",
         icon : "fa-solid fa-house-user"
     },
@@ -17,18 +17,18 @@ export const MenuItems =[
         cName : "nav-links",
         icon : "fa-solid fa-briefcase"
     },
-    {
-        title : "Rooms",
-        url : "contact",
-        cName : "nav-links",
-        icon : "fa-solid fa-address-book"
-    },
-    {
-        title : "Reviews",
-        url : "reviews",
-        cName : "nav-links",
-        icon : "fa-solid fa-address-book"
-    },
+    // {
+    //     title : "Rooms",
+    //     url : "contact",
+    //     cName : "nav-links",
+    //     icon : "fa-solid fa-address-book"
+    // },
+    // {
+    //     title : "Reviews",
+    //     url : "reviews",
+    //     cName : "nav-links",
+    //     icon : "fa-solid fa-address-book"
+    // },
     // {
     //     title : "Sign Up",
     //     url : "#signup",

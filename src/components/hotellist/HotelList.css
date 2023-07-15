@@ -1,0 +1,147 @@
+.lisContainer{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+}
+.listWrapper{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+}
+.listSearch{
+    flex: 1;
+    margin-top: 50px;
+    padding-left: 180px;
+    position: sticky;
+    top: 10px;
+    /* background-color: #ffffff; */
+}
+.lsTitle{
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20px;
+}
+.listResult{
+    flex: 3;
+}
+.lsItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.lsItem>input{
+    height: 30px;
+    border: none;
+    padding: 5px;
+}
+.lsItem>label{
+    font-size: 15px;
+    color: black;
+}
+.lsItem>span{
+    height: 30px;
+    padding: 5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.lsOptionItem{
+    display: flex;
+    /* flex-direction: row; */
+     /* justify-content: space-between; */
+     border: none;
+}
+.lsOptionItem1{
+    background-color: #f5f9fa;
+    border: none;
+    border-radius: 10px;
+    width: 90px;
+}
+.lsOptionItem1>input{
+    height: 50px;
+    width: 80px;
+    border: none;
+    outline: none;
+    padding-left: 2px;
+    border-radius: 10px;
+    background-color: #f5f9fa;
+}
+.lsOptionItem2{
+    background-color: #f5f9fa;
+    border: none;
+    border-radius: 10px;
+    width: 90px;
+    margin-left: 30px;
+}
+.lsOptionItem2>input{
+    height: 50px;
+    width: 80px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #f5f9fa;
+}
+.desti{
+    border-radius: 10px;
+    background-color: #f5f9fa;
+    width: 200px;
+    /* background-color: red; */
+    border: none;
+    outline: none;
+}
+.dates{
+    background-color: #f5f9fa;
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.lsItemBdiv{
+    display: flex;
+    border: none;
+}
+.lsItemButton1{
+    height: 40px;
+    width: 80px;
+    border: none;
+    background-color:#fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.lsItemButton2{
+    height: 40px;
+    width: 130px;
+    border: none;
+    margin-left: 10px;
+    background-color:#fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.lsItemButton3{
+    height: 40px;
+    width: 130px;
+    border: none;
+    background-color:#fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.lsItemButton4{
+    height: 40px;
+    width: 100px;
+    border: none;
+    margin-left: 10px;
+    background-color:#fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

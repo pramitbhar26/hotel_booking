@@ -62,13 +62,14 @@
     }
 
     .heading{
-      display: flex;
+      display: inline-flex;
+      flex-direction: row;
       top: 10px;
       /* width: 100%; */
       position: relative;
       align-items: center;
       justify-content:center;
-      right: 1px;
+      left: 10px;
       z-index: 1;
     }
   }

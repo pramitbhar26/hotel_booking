@@ -14,3 +14,41 @@
     left: 200px;
     border-radius: 50px;
 }
+.row1{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* left: 1000px; */
+    position: relative;
+    gap: 380px;
+    text-decoration: none;
+    color: #222;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 0.7rem 5rem;
+    white-space: nowrap;
+}
+.row2{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* left: 1000px; */
+    position: relative;
+    gap: 380px;
+    text-decoration: none;
+    color: #222;
+    padding: 0rem 4rem;
+}
+.heading2{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem 20rem;
+    font-size:x-large;
+}
+.facilitiesIcon{
+   padding-top: 5rem;
+}
