@@ -4,12 +4,14 @@ import './App.css';
 import Home from './Routes/Home';
 import { Route,Routes } from 'react-router';
 import HotelListingwithFilter from './Routes/HotelListingwithFilter';
+import HotelsDesc from './Routes/HotelsDesc';
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/booking" element={<HotelListingwithFilter />}/>
+        <Route path="/hotelDescription" element={<HotelsDesc/>}/>
       </Routes>  
     </div>
   );
