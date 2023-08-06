@@ -1,15 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import "./HotelList.css"
 import { format, setDate } from 'date-fns'
 import { useLocation, useNavigate } from 'react-router'
 import { DateRange } from 'react-date-range'
 import SearchItem from '../searchItem/SearchItem'
+import useFetch from '../../hooks/useFetch.js'
+import axios from 'axios'
 const HotelList = () => {
   const location = useLocation();
   const [destination, setdestination] = useState(location.state.destination);
+  console.log(destination);
+  // const data=[];
+  // const loading=false;
   const [date, setdate] = useState(location.state.date);
   const [options, setoptions] = useState(location.state.options);
   const [openDate, setOpenDate] = useState(false);
+  const [min,setMin] = useState(undefined);
+  const [max,setMax] = useState(undefined);
   const reset = ()=>{
     setdestination(" ");
     // setdate(new Date());
@@ -19,14 +26,23 @@ const HotelList = () => {
     Room:1
     });
   };
+  const {data, loading, error, reFetch } = useFetch(`http://localhost:8800/api/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`
+  );
+
+  
   const handleOption = (name, operation) => {
     setoptions((prev) => {
       return {
         ...prev,
-        [name]: operation == "i" ? options[name] + 1 : options[name] - 1,
+        [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
       };
     });
   };
+
+  const handleClick = ()=>{
+    reFetch()
+  };
+
   return (
 
     <div className='listContainer'>
@@ -59,10 +75,10 @@ const HotelList = () => {
             <h3>Price</h3>
             <div className='lsOptionItem'>
               <div className='lsOptionItem1'>
-                <input className='lsOptionInput' type='number' placeholder='From' />
+                <input className='lsOptionInput' onChange={e=>setMin(e.target.value)} type='number' placeholder='From' />
               </div>
               <div className='lsOptionItem2'>
-                <input className='lsOptionInput' type='number' placeholder='To' />
+                <input className='lsOptionInput' onChange={e=>setMax(e.target.value)} type='number' placeholder='To' />
               </div>
             </div>
           </div>
@@ -152,19 +168,16 @@ const HotelList = () => {
 
           </div>
           <div className='lsItem'>
-            <button className='SubmitButton'>Apply</button>
+            <button className='SubmitButton' onClick={handleClick}>Apply</button>
           </div>
         </div>
         <div className='listResult'>
-          <h1 className='listResultCounter'>16 Results</h1>
-           <SearchItem/>
-           <SearchItem/>
-           <SearchItem/>
-           <SearchItem/>
-           <SearchItem/>
-           <SearchItem/>
-           <SearchItem/>
-           <SearchItem/>
+          <h1 className='listResultCounter'>{data.length}Results</h1>
+           {loading? "loading" : <>
+            {data.map(item=>(
+              <SearchItem item={item} key={item._id} />
+            ))}
+           </>}
         </div>
       </div>
 

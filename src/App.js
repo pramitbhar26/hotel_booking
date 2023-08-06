@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/booking" element={<HotelListingwithFilter />}/>
-        <Route path="/hotelDescription" element={<HotelsDesc/>}/>
+        <Route path="/hotelDescription/:id" element={<HotelsDesc/>}/>
       </Routes>  
     </div>
   );

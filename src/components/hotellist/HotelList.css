@@ -2,6 +2,7 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        position: relative;
 }
 .listWrapper{
     width: 100%;
@@ -12,9 +13,10 @@
 .listSearch{
     flex: 1;
     margin-top: 50px;
-    padding-left: 180px;
+    padding-left: 130px;
     position: sticky;
-    top: 10px;
+    position: -webkit-sticky;
+    top: 0;
     /* background-color: #ffffff; */
 }
 .parallel{
